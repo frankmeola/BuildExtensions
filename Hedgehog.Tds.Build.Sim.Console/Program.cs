@@ -22,6 +22,26 @@ namespace Hedgehog.Tds.Build.Sim.Console
                     DeleteProcess deleteProcess = new DeleteProcess();
                     deleteProcess.Execute(deleteArgs);
                     break;
+                case "backup":
+                    BackupArgs backupArgs = new BackupArgs(args);
+                    BackupProcess backupProcess = new BackupProcess();
+                    backupProcess.Execute(backupArgs);
+                    break;
+                case "restore":
+                    RestoreArgs restoreArgs = new RestoreArgs(args);
+                    RestoreProcess restoreProcess = new RestoreProcess();
+                    restoreProcess.Execute(restoreArgs);
+                    break;
+                case "delete-backup":
+                    DeleteBackupArgs deleteBackupArgs = new DeleteBackupArgs(args);
+                    DeleteBackupProcess deleteBackupProcess = new DeleteBackupProcess();
+                    deleteBackupProcess.Execute(deleteBackupArgs);
+                    break;
+                case "install-module":
+                    InstallModuleArgs installModuleArgs = new InstallModuleArgs(args);
+                    InstallModuleProcess installModuleProcess = new InstallModuleProcess();
+                    installModuleProcess.Execute(installModuleArgs);
+                    break;
             }
 
 

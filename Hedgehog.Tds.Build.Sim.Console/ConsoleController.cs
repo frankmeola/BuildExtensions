@@ -18,6 +18,11 @@ namespace Hedgehog.Tds.Build.Sim.Console
 
         }
 
+        public void SetProgress(long progress)
+        {
+            System.Console.WriteLine("SIM: Operation Progress: " + progress);
+        }
+
         public void IncrementProgress(long progress)
         {
 

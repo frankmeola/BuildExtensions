@@ -32,25 +32,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SIM.Base">
+    <Reference Include="SIM.Adapters">
+      <HintPath>..\Libs\Sim\SIM.Adapters.dll</HintPath>
+    </Reference>
+    <Reference Include="SIM.Base, Version=1.3.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Sim\SIM.Base.dll</HintPath>
     </Reference>
-    <Reference Include="SIM.Kernel.Adapters">
-      <HintPath>..\Libs\Sim\SIM.Kernel.Adapters.dll</HintPath>
+    <Reference Include="SIM.Instances">
+      <HintPath>..\Libs\Sim\SIM.Instances.dll</HintPath>
     </Reference>
-    <Reference Include="SIM.Kernel.Instances">
-      <HintPath>..\Libs\Sim\SIM.Kernel.Instances.dll</HintPath>
-    </Reference>
-    <Reference Include="SIM.Kernel.Pipelines">
-      <HintPath>..\Libs\Sim\SIM.Kernel.Pipelines.dll</HintPath>
-    </Reference>
-    <Reference Include="SIM.Kernel.Products">
-      <HintPath>..\Libs\Sim\SIM.Kernel.Products.dll</HintPath>
-    </Reference>
-    <Reference Include="SIM.Pipelines">
+    <Reference Include="SIM.Pipelines, Version=1.3.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Sim\SIM.Pipelines.dll</HintPath>
     </Reference>
-    <Reference Include="SIM.Tool.Base">
+    <Reference Include="SIM.Products">
+      <HintPath>..\Libs\Sim\SIM.Products.dll</HintPath>
+    </Reference>
+    <Reference Include="SIM.Tool.Base, Version=1.3.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Sim\SIM.Tool.Base.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -62,11 +62,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InstallModuleArgs.cs" />
+    <Compile Include="InstallModuleProcess.cs" />
+    <Compile Include="DeleteBackupArgs.cs" />
+    <Compile Include="BackupArgs.cs" />
+    <Compile Include="DeleteBackupProcess.cs" />
+    <Compile Include="RestoreProcess.cs" />
     <Compile Include="BaseArgsProcessor.cs" />
     <Compile Include="ConsoleController.cs" />
     <Compile Include="DeleteArgs.cs" />
     <Compile Include="DeleteProcess.cs" />
     <Compile Include="InstallArgs.cs" />
+    <Compile Include="RestoreArgs.cs" />
+    <Compile Include="BackupProcess.cs" />
     <Compile Include="InstallProcess.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
